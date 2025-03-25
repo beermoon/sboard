@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         try {
-            const response = await fetch(`/user/nick/${nick}`);
+            const response = await fetch(`/user/nick/${value}`);
             const data = await response.json();
             console.log(data);
 
@@ -175,12 +175,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // JSON 데이터 생성
         const jsonData = {
-            "authCode" : value
+            "authCode": value
         };
-
-
-        const formData = new URLSearchParams();
-        formData.append("authCode", value);
 
         // 서버 전송
         const response = await fetch('/user/email/auth', {
@@ -257,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // 5) 이메일 유효성 검사 결과
         if(!isEmailOk){
-           // return false;
+            //return false;
         }
 
         // 6) 휴대폰 유효성 검사 결과
