@@ -65,7 +65,7 @@ public class UserController {
     public String terms(Model model){
 
         TermsDTO termsDTO = termsService.terms();
-        model.addAttribute(termsDTO);
+        model.addAttribute("terms", termsDTO);
 
         return "/user/terms";
     }
