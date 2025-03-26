@@ -64,8 +64,8 @@ public class UserController {
     @GetMapping("/user/terms")
     public String terms(Model model){
 
-        TermsDTO termsDTO = termsService.terms();
-        model.addAttribute("terms", termsDTO);
+        TermsDTO sdfsdf = termsService.terms();
+        model.addAttribute(sdfsdf);
 
         return "/user/terms";
     }
