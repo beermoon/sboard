@@ -21,6 +21,7 @@ public class Article {
 
     @Column(nullable = false)
     private String cate;
+
     private String title;
     private String content;
     private int comment;
@@ -31,6 +32,9 @@ public class Article {
 
     @CreationTimestamp
     private LocalDateTime wdate;
+
+
+
 
     @PrePersist
     public void prePersist(){
